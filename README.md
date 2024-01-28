@@ -1,4 +1,4 @@
-# Renewable-Research-Project
+# 🔌 ML+Renewable Energy Research Project
 
 2 seperate models are used in this process, one for wind installations and one for solar instllations. 
 
