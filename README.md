@@ -4,4 +4,4 @@
 
 
 
-In the other repository on my profile (Renewable_Suitability_Predictor) you will find the files and documentation of a python package that employs the machine learning techniques used in this research project for consumer and industry use 
+My project uses machine learning techniques to predict a location's suitability for a utility-scale wind or solar energy installation. Specifically, my project identifies locations with promising resource potential. The data I used is from the National Renewable Energy Laboratory's Physical Solar Model API. My project is also available for users on the Python Package Index.
