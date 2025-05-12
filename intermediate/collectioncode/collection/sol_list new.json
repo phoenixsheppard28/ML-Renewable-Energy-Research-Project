@@ -1,0 +1,602 @@
+{
+    "2W Permian Solar Project Hybrid": {
+        "State": "Texas",
+        "Coordinates": "32.1164, -102.5283",
+        "Installed capacity (MW)": 420
+    },
+    "Prospero Solar 1": {
+        "State": "Texas",
+        "Coordinates": "32.2879, -102.8404",
+        "Installed capacity (MW)": 300
+    },
+    "Titan (Texas) Solar Project": {
+        "State": "Texas",
+        "Coordinates": "31.7004, -104.4581",
+        "Installed capacity (MW)": 260
+    },
+    "Greasewood solar farm": {
+        "State": "Texas",
+        "Coordinates": "31.0310, -102.4882",
+        "Installed capacity (MW)": 255
+    },
+    "Taygete Energy Project solar farm": {
+        "State": "Texas",
+        "Coordinates": "31.1652, -103.1259",
+        "Installed capacity (MW)": 255
+    },
+    "Av Solar Ranch One solar farm": {
+        "State": "California",    
+        "Coordinates": "34.7803, -118.4244",
+        "Installed capacity (MW)": 253
+    },
+    "Mount solar farm (United States)": {
+        "State": "California"   ,
+        "Coordinates": "32.6685, -115.6292",
+        "Installed capacity (MW)": 252
+    },
+    "Copper Mountain Solar 5": {
+        "State": "Nevada",
+        "Coordinates": "35.7763, -114.9737",
+        "Installed capacity (MW)": 252
+    },
+    "Galloway 1 solar farm": {
+        "State": "Texas",
+        "Coordinates": "31.4359, -99.7966",
+        "Installed capacity (MW)": 250
+    },
+    "Moapa Southern Paiute solar farm": {
+        "State": "Nevada",
+        "Coordinates": "36.5301, -114.7703",
+        "Installed capacity (MW)": 250
+    },
+    "Phoebe Solar": {
+        "State": "Texas",
+        "Coordinates": "31.8434, -102.8683",
+        "Installed capacity (MW)": 250
+    },
+    "Westland solar farm Aquamarine": {
+        "State": "California",
+        "Coordinates": "36.1897, -119.9042",
+        "Installed capacity (MW)": 250
+    },
+    "Bighorn Solar 1": {
+        "State": "Colorado",
+        "Coordinates": "38.2075, -104.5967 ",
+        "Installed capacity (MW)": 240
+    },
+    "Misae Solar 1": {
+        "State": "Texas",
+        "Coordinates": "34.3805, -100.0996",
+        "Installed capacity (MW)": 240
+    },
+    "Pleinmont Solar 2": {
+        "State": "Virginia",
+        "Coordinates": "38.2471, -77.7862",
+        "Installed capacity (MW)": 240
+    },
+    "Muscle Shoals solar farm": {
+        "State": "Alabama",
+        "Coordinates": "34.7697, -87.9045",
+        "Installed capacity (MW)": 227
+    },
+    "Azure Sky Solar": {
+        "State": "Texas",
+        "Coordinates": "32.9989, -99.5985",
+        "Installed capacity (MW)": 225
+    },
+    "Long Draw Solar": {
+        "State": "Texas",
+        "Coordinates": "32.7414, -101.6218",
+        "Installed capacity (MW)": 225
+    },
+    "Maplewood (Canadian Solar) solar farm 1": {
+        "State": "Texas",
+        "Coordinates": "30.9766, -102.2578",
+        "Installed capacity (MW)": 222
+    },
+    "Cool Springs Solar": {
+        "State": "Georgia",
+        "Coordinates": "30.7479, -84.6805",
+        "Installed capacity (MW)": 213
+    },
+    "Tranquillity solar farm": {
+        "State": "California",
+        "Coordinates": "36.5814, -120.4045",
+        "Installed capacity (MW)": 205
+    },
+    "Twiggs Solar": {
+        "State": "Georgia",
+        "Coordinates": "32.6050, -83.4912",
+        "Installed capacity (MW)": 204
+    },
+    "ANSON Solar Center": {
+        "State": "Texas",
+        "Coordinates": "32.8110, -99.9175",
+        "Installed capacity (MW)": 200
+    },
+    "Athos solar farm 2": {
+        "State": "California",
+        "Coordinates": "33.7513, -115.3550",
+        "Installed capacity (MW)": 200
+    },
+    "Corazon Energy solar farm": {
+        "State": "Texas",
+        "Coordinates": "27.6347, -99.2583",
+        "Installed capacity (MW)": 200
+    },
+    "Dodge Flat solar farm": {
+        "State": "Nevada",
+        "Coordinates": "40.7130, -119.4672",
+        "Installed capacity (MW)": 200
+    },
+    "Hillcrest Solar": {
+        "State": "Ohio",
+        "Coordinates": "39.0770, -83.9061",
+        "Installed capacity (MW)": 200
+    },
+    "Holstein 1 (Duke) solar farm": {
+        "State": "Texas",
+        "Coordinates": "32.1041, -100.1624",
+        "Installed capacity (MW)": 200
+    },
+    "Prairie Wolf Solar": {
+        "State": "Illinois",
+        "Coordinates": "39.5446, -87.9720",
+        "Installed capacity (MW)": 200
+    },
+    "Rambler solar farm": {
+        "State": "Texas",
+        "Coordinates": "31.5170, -100.6000",
+        "Installed capacity (MW)": 200
+    },
+    "Riverstart Solar Park": { 
+        "State": "Indiana",
+        "Coordinates": "40.0462, -85.0451",
+        "Installed capacity (MW)": 200
+    },
+    "Roadrunner (Enel) solar farm 1": {
+        "State": "Texas",
+        "Coordinates": "31.2194, -102.1922",
+        "Installed capacity (MW)": 200
+    },
+    "Sand Fork Solar": {
+        "State": "Texas",
+        "Coordinates": "32.6123, -99.8208",
+        "Installed capacity (MW)": 200
+    },
+    "Techren Solar 2": {
+        "State": "Nevada",
+        "Coordinates": "35.8673, -114.9564",
+        "Installed capacity (MW)": 200
+    },
+    "Wright Solar Park": {
+        "State": "California",
+        "Coordinates": "37.0094, -120.9572",
+        "Installed capacity (MW)": 200
+    },
+    "Impact Solar 1": {
+        "State": "Texas",
+        "Coordinates": "33.4678, -95.3709",
+        "Installed capacity (MW)": 198
+    },
+    "Golden Field Solar 3": {
+        "State": "California",
+        "Coordinates": "34.8470, -118.3950",
+        "Installed capacity (MW)": 192
+    },
+    "Garland solar farm 2": {
+        "State": "California",
+        "Coordinates": "34.8253, -118.5250",
+        "Installed capacity (MW)": 185
+    },
+    "Midway (174 Power Global) solar farm": {
+        "State": "Texas",
+        "Coordinates": "30.9955, -102.2235",
+        "Installed capacity (MW)": 182
+    },
+    "Lily Solar Hybrid": {
+        "State": "Texas",
+        "Coordinates": "32.5333, -96.4290",
+        "Installed capacity (MW)": 181
+    },
+    "Aragorn Solar Project": {
+        "State": "Texas",
+        "Coordinates": "31.7201, -104.4423",
+        "Installed capacity (MW)": 180
+    },
+    "Castle Gap Solar Hybrid": {
+        "State": "Texas",
+        "Coordinates": "31.2550, -102.2720",
+        "Installed capacity (MW)": 180
+    },
+    "Townsite Solar Project Hybrid": {
+        "State": "Nevada",
+        "Coordinates": "35.9373, -114.8840",
+        "Installed capacity (MW)": 180
+    },
+    "Camilla Solar Energy Project": {
+        "State": "Georgia",
+        "Coordinates": "31.2696, -84.2287",
+        "Installed capacity (MW)": 171
+    },
+    "Mesquite Solar 1": {
+        "State": "Arizona",
+        "Coordinates": "33.3418, -112.9040",
+        "Installed capacity (MW)": 170
+    },
+    "Highlander Solar Energy Station 1": {
+        "State": "Virginia",
+        "Coordinates": "38.2471, -77.7862",
+        "Installed capacity (MW)": 165
+    },
+    "Rancho Seco Solar II": {
+        "State": "California",
+        "Coordinates": "38.3468, -121.1198",
+        "Installed capacity (MW)": 160
+    },
+    "Roserock solar farm": {
+        "State": "Texas",
+        "Coordinates": "30.9602, -103.3067",
+        "Installed capacity (MW)": 160
+    },
+    "Sun Streams solar farm": {
+        "State": "Arizona",
+        "Coordinates": "33.3488, -112.8348",
+        "Installed capacity (MW)": 160
+    },
+    "Juno Solar Project 1": {
+        "State": "Texas",
+        "Coordinates": "32.7729, -101.3910",
+        "Installed capacity (MW)": 159
+    },
+    "Springbok solar farm 2": {
+        "State": "California",
+        "Coordinates": "35.2492, -117.9768",
+        "Installed capacity (MW)": 155
+    },
+    "Buckthorn Westex solar farm": {
+        "State": "Texas",
+        "Coordinates": "30.5755, -102.5513",
+        "Installed capacity (MW)": 154
+    },
+    "North Rosamond Solar": {
+        "State": "California",
+        "Coordinates": "34.8620, -118.3800",
+        "Installed capacity (MW)": 151
+    },
+    "Topaz solar farm 2": {
+        "State": "California",
+        "Coordinates": "35.4056, -120.0686",
+        "Installed capacity (MW)": 151
+    },
+    "Badger Hollow solar farm 1": {
+        "State": "Wisconsin",
+        "Coordinates": "42.9456, -90.3494",
+        "Installed capacity (MW)": 150
+    },
+    "CA Flats Solar 2": {
+        "State": "California",
+        "Coordinates": "35.6156, -120.4044",
+        "Installed capacity (MW)": 150
+    },
+    "Crane Solar": {
+        "State": "Texas",
+        "Coordinates": "31.2544, -102.3117",
+        "Installed capacity (MW)": 150
+    },
+    "Elora Solar": {
+        "State": "Tennessee",
+        "Coordinates": "35.0601, -86.3400",
+        "Installed capacity (MW)": 150
+    },
+    "Fort Powhatan solar farm": {
+        "State": "Virginia",
+        "Coordinates": "37.2601, -77.0800",
+        "Installed capacity (MW)": 150
+    },
+    "Hardin Solar Energy 1": {
+        "State": "Ohio",
+        "Coordinates": "40.6595, -83.8137",
+        "Installed capacity (MW)": 150
+    },
+    "Oberon (174 Power) solar farm 1": {
+        "State": "Texas",
+        "Coordinates": "31.7033, -102.7012",
+        "Installed capacity (MW)": 150
+    },
+    "Quitman Solar 1": {
+        "State": "Georgia",
+        "Coordinates": "30.8490, -83.6433",
+        "Installed capacity (MW)": 150
+    },
+    "Sun Streams 2 solar farm": {
+        "State": "Arizona",
+        "Coordinates": "33.3204, -112.8168",
+        "Installed capacity (MW)": 150
+    },
+    "Two Creeks Solar": {
+        "State": "Wisconsin",
+        "Coordinates": "44.2496, -87.5453",
+        "Installed capacity (MW)": 150
+    },
+    "Upton County Solar": {
+        "State": "Texas",
+        "Coordinates": "31.2418, -102.2903",
+        "Installed capacity (MW)": 150
+    },
+    "Tenaska Imperial Solar Energy Center West": {
+        "State": "California",
+        "Coordinates": "32.6633, -115.6583",
+        "Installed capacity (MW)": 149
+    },
+    "Taylor County Solar": {
+        "State": "Georgia",
+        "Coordinates": "32.5831, -84.2972",
+        "Installed capacity (MW)": 148
+    },
+    "Campo Verde Solar": {
+        "State": "California",
+        "Coordinates": "32.7533, -115.7264",
+        "Installed capacity (MW)": 147
+    },
+    "East Blackland Solar Project 1": {
+        "State": "Texas",
+        "Coordinates": "30.4214, -97.4614",
+        "Installed capacity (MW)": 144
+    },
+    "Colonial Trail West solar farm": {
+        "State": "Virginia",
+        "Coordinates": "37.1389, -76.9022",
+        "Installed capacity (MW)": 142
+    },
+    "Edwards Sanborn solar farm 1B": {
+        "State": "California",
+        "Coordinates": "34.9415, -118.1290",
+        "Installed capacity (MW)": 141
+    },
+    "Juno Solar Project 2": {
+        "State": "Texas",
+        "Coordinates": "32.7729, -101.3910",
+        "Installed capacity (MW)": 141
+    },
+    "Maverick Solar 7": {
+        "State": "California",
+        "Coordinates": "33.7001, -115.3800",
+        "Installed capacity (MW)": 132
+    },
+    "CA Flats Solar 1": {
+        "State": "California",
+        "Coordinates": "35.6156, -120.4044",
+        "Installed capacity (MW)": 130
+    },
+    "Ivanpah Solar Electric Generating System 2": {
+        "State": "California",
+        "Coordinates": "35.5561, -115.4686",
+        "Installed capacity (MW)": 130
+    },
+    "Wilmot Energy Center solar farm": {
+        "State": "Arizona",
+        "Coordinates": "32.0435, -110.8927",
+        "Installed capacity (MW)": 130
+    },
+    "Tenaska Imperial Solar Energy Center South": {
+        "State": "California",
+        "Coordinates": "32.6633, -115.6583",
+        "Installed capacity (MW)": 129
+    },
+    "American Kings Solar": {
+        "State": "California",
+        "Coordinates": "36.2401, -119.8980",
+        "Installed capacity (MW)": 128
+    },
+    "Big Beau Solar": {
+        "State": "California",
+        "Coordinates": "34.9070, -118.3441",
+        "Installed capacity (MW)": 128
+    },
+    "Robins Air Force Base Solar": {
+        "State": "Georgia",
+        "Coordinates": "32.6812, -83.6164",
+        "Installed capacity (MW)": 128
+    },
+    "Briar Creek Solar": {
+        "State": "Texas",
+        "Coordinates": "32.0675, -96.5851",
+        "Installed capacity (MW)": 127
+    },
+    "Genesis Solar Enegy Project 2": {
+        "State": "California",
+        "Coordinates": "33.6650, -114.9981",
+        "Installed capacity (MW)": 125
+    },
+    "Solana Solar Generating Station 1": {
+        "State": "Arizona",
+        "Coordinates": "32.9223, -112.9559",
+        "Installed capacity (MW)": 125
+    },
+    "Coniglio Solar": {
+        "State": "Texas",
+        "Coordinates": "33.4045, -96.0825",
+        "Installed capacity (MW)": 124
+    },
+    "Indian Mesa Solar 1": {
+        "State": "Texas",
+        "Coordinates": "32.062,-101.300",
+        "Installed capacity (MW)": 124
+    },
+    "Cove Mountain Solar 2":{
+        "State": "Utah",
+        "Coordinates": "37.6386, -113.6371",
+        "Installed capacity (MW)": 122
+    },
+    "Milford Solar 1": {
+        "State": "Utah",
+        "Coordinates": "38.4907, -113.0183",
+        "Installed capacity (MW)": 124
+    },
+    "Tepco West Valley Solar": {
+        "State": "Utah",
+        "Coordinates": "40.400,-113.572",
+        "Installed capacity (MW)": 124
+    },
+    "Montesol solar farm": {
+        "State": "Texas",
+        "Coordinates": "30.309,-97.336",
+        "Installed capacity (MW)": 120
+    },
+    "Mount Signal Solar": {
+        "State": "California",
+        "Coordinates": "32.713,-115.481",
+        "Installed capacity (MW)": 118
+    },
+    "Comanche Solar":{
+        "State": "Colorado",
+        "Coordinates": "38.2053, -104.5667",
+        "Installed capacity (MW)": 120
+    },
+    "Dougherty County Solar":{
+        "State": "Georgia",
+        "Coordinates": "31.5120, -84.0445",
+        "Installed capacity (MW)": 120
+    },
+    "Wagy Solar Farm":{
+        "State": "Texas",
+        "Coordinates": "29.2423, -95.6581",
+        "Installed capacity (MW)": 120
+    },
+    "East Pecos Solar":{
+        "State": "Texas",
+        "Coordinates": "31.0009, -102.2817",
+        "Installed capacity (MW)": 120
+    },
+    "Blue Bell Solar":{
+        "State": "Texas",
+        "Coordinates": "31.8880, -100.8250",
+        "Installed capacity (MW)": 145
+    },
+    "Valentine County Solar":{
+        "State": "California",
+        "Coordinates": "34.9042, -118.3843",
+        "Installed capacity (MW)": 111
+    },
+    "Assembly Solar 2":{
+        "State": "Michigan",
+        "Coordinates": "43.0437, -83.9600",
+        "Installed capacity (MW)": 110
+    },
+    "Catalina Solar 1A":{
+        "State": "California",
+        "Coordinates": "34.9383, -118.3345",
+        "Installed capacity (MW)": 110
+    },
+    "Crescent Dunes Solar Energy":{
+        "State": "Nevada",
+        "Coordinates": "38.2389, -117.3636",
+        "Installed capacity (MW)": 110
+    },
+    "Quito Solar Pv Project":{
+        "State": "California",
+        "Coordinates": "37.1303, -121.0522",
+        "Installed capacity (MW)": 108
+    },
+    "Willow Spring Solar":{
+        "State": "California",
+        "Coordinates": "34.8267, -118.3352",
+        "Installed capacity (MW)":108
+    },
+    "Snipesville solar farm":{
+        "State":"Georgia",
+        "Coordinates":"31.7088, -82.7157",
+        "Installed capacity (MW)":107
+    },
+    "Wistaria Ranch Solar":{
+        "State":"California",
+        "Coordinates":"32.6760, -115.6190",
+        "Installed capacity (MW)":107
+    },
+    "Alamo (Texas) solar farm":{
+        "State":"Texas",
+        "Coordinates":"30.9931, -102.2708",
+        "Installed capacity (MW)":105
+    },
+    "Antelope Dsr solar farm":{
+        "State":"California",
+        "Coordinates":"34.7450, -118.3092",
+        "Installed capacity (MW)":105
+    },
+    "Springbok solar farm":{
+        "State":"California",
+        "Coordinates":"35.2492, -117.9768",
+        "Installed capacity (MW)":105
+    },
+    "Cameron (EDP) Solar":{
+        "State":"Georgia",
+        "Coordinates":"32.5619, -84.2758",
+        "Installed capacity (MW)":104
+    },
+    "Sunshine Valley Solar":{
+        "State":"Nevada",
+        "Coordinates":"36.5180, -116.4970",
+        "Installed capacity (MW)":104
+    },
+    "Arlington (Silicon Ranch) solar farm":{
+        "State":"Georgia",
+        "Coordinates":"31.4155, -84.8307",
+        "Installed capacity (MW)":102
+    },
+    "Great Valley Solar Portfolio Holdings":{
+        "State":"California",
+        "Coordinates":"36.5812, -120.3796",
+        "Installed capacity (MW)":102
+    },
+    "Henrietta Solar Project":{
+        "State":"California",
+        "Coordinates":"36.2188, -119.8058",
+        "Installed capacity (MW)":102
+    },
+    "Lamesa Solar":{
+        "State":"Texas",
+        "Coordinates":"32.7156, -101.9265",
+        "Installed capacity (MW)":102
+    },
+    "Battle Mountain Solar Project":{
+        "State":"Nevada",
+        "Coordinates":"40.7184, -117.0614",
+        "Installed capacity (MW)":101
+    },
+    "White Pine Solar":{
+        "State":"Georgia",
+        "Coordinates":"32.5060, -84.2570",
+        "Installed capacity (MW)":101
+    },
+    "Boulder Solar":{
+        "State":"Nevada",
+        "Coordinates":"35.8388, -114.9642",
+        "Installed capacity (MW)":100
+    },
+    "Chicot Solar":{
+        "State":"Arkansas",
+        "Coordinates":"33.4790, -91.3490",
+        "Installed capacity (MW)":100
+    },
+    "East Line Solar":{
+        "State":"Arizona",
+        "Coordinates":"32.8470, -111.5651",
+        "Installed capacity (MW)":100
+    },
+    "Fish Springs Ranch solar farm":{
+        "State":"Nevada",
+        "Coordinates":"40.0747, -119.9742",
+        "Installed capacity (MW)":100
+    },
+    "Hunter Solar":{
+        "State":"Utah",
+        "Coordinates":"39.1422, -111.0511",
+        "Installed capacity (MW)":100
+    },
+    "Mega Solar Array Project":{
+        "State":"Nevada",
+        "Coordinates":"36.4340, -114.9471",
+        "Installed capacity (MW)":100
+    }
+}

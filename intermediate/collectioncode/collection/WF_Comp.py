@@ -1,0 +1,265 @@
+import requests
+import json
+import pandas as pd
+import numpy as np
+import io
+import time
+import os
+
+def json_make():
+    wind_dic = {
+        "Alta Wind Energy Center I-XI": {"State": "California", "Coordinates": "35.017,-118.317", "Installed capacity (MW)": 1548},
+        "Western Spirit Wind": {"State": "New Mexico","Coordinates":"34.365492, -105.115391", "Installed capacity (MW)": 1050},
+        "Traverse Wind Energy Center": {"State": "Oklahoma", "Coordinates": "35.550,-98.683", "Installed capacity (MW)": 998},
+        "Los Vientos Wind Farm": {"State": "Texas", "Coordinates": "26.367,-98.817", "Installed capacity (MW)": 900},
+        "Shepherds Flat Wind Farm": {"State": "Oregon", "Coordinates": "45.700,-120.067", "Installed capacity (MW)": 845},
+        "Meadow Lake Wind Farm": {"State": "Indiana", "Coordinates": "40.600,-86.867", "Installed capacity (MW)": 801},
+        "Roscoe Wind Project": {"State": "Texas", "Coordinates": "32.267,-100.350", "Installed capacity (MW)": 781},
+        "Javelina Wind Energy Center": {"State": "Texas", "Coordinates": "27.817,-99.450", "Installed capacity (MW)": 749},
+        "Horse Hollow Wind Energy Center": {"State": "Texas", "Coordinates": "32.183,-100.033", "Installed capacity (MW)": 736},
+        "Tehachapi Pass Wind Farm": {"State": "California", "Coordinates": "35.100,-118.283", "Installed capacity (MW)": 690},
+        "Capricorn Ridge Wind Farm": {"State": "Texas", "Coordinates": "31.900,-100.900", "Installed capacity (MW)": 662},
+        "San Gorgonio Pass Wind Farm": {"State": "California", "Coordinates": "33.917,-116.583", "Installed capacity (MW)": 619},
+        "Peñascal Wind Farm": {"State": "Texas", "Coordinates": "27.117,-97.533", "Installed capacity (MW)": 605},
+        "Limon Wind Energy Center": {"State": "Colorado", "Coordinates": "39.383,-103.567", "Installed capacity (MW)": 601},
+        "Fowler Ridge Wind Farm": {"State": "Indiana", "Coordinates": "40.600,-87.317", "Installed capacity (MW)": 600},
+        "Rush Creek Wind Project": {"State": "Colorado", "Coordinates": "39.167,-103.850", "Installed capacity (MW)": 600},
+        "Sweetwater Wind Farm": {"State": "Texas", "Coordinates": "32.333,-100.450", "Installed capacity (MW)": 585},
+        "Altamont Pass Wind Farm": {"State": "California", "Coordinates": "37.733,-121.650", "Installed capacity (MW)": 576},
+        "Flat Ridge Wind Farm": {"State": "Kansas", "Coordinates": "37.217,-98.250", "Installed capacity (MW)": 570},
+        "Cedar Creek Wind Farm": {"State": "Colorado", "Coordinates": "40.867,-104.100", "Installed capacity (MW)": 550},
+        "Cedar Springs Wind Farm": {"State": "Wyoming", "Coordinates": "42.983,-105.433", "Installed capacity (MW)": 533},
+        "Buffalo Gap Wind Farm": {"State": "Texas", "Coordinates": "32.317,-100.150", "Installed capacity (MW)": 523},
+        "Spinning Spur Wind Farm": {"State": "Texas", "Coordinates": "35.233,-102.217", "Installed capacity (MW)": 516},
+        "Highland Wind Energy Center": {"State": "Iowa", "Coordinates": "43.083,-95.567", "Installed capacity (MW)": 502},
+        "South Plains Wind Farm I & II": {"State": "Texas", "Coordinates": "34.183,-101.367", "Installed capacity (MW)": 500},
+        "TB Flats": {"State": "Wyoming", "Coordinates": "42.133,-106.117", "Installed capacity (MW)": 500},
+        "Cheyenne Ridge Wind Farm": {"State": "Colorado", "Coordinates": "38.983,-102.333", "Installed capacity (MW)": 498},
+        "Bison Wind Energy Center": {"State": "North Dakota", "Coordinates": "46.983,-101.550", "Installed capacity (MW)": 497},
+        "Panther Creek Wind Farm": {"State": "Texas", "Coordinates": "31.967,-99.900", "Installed capacity (MW)": 458},
+        "Biglow Canyon Wind Farm": {"State": "Oregon", "Coordinates": "45.633,-120.600", "Installed capacity (MW)": 450},
+        "Rolling Hills Wind Farm": {"State": "Iowa", "Coordinates": "41.300,-94.783", "Installed capacity (MW)": 444},
+        "Peetz Table Wind Energy Center": {"State": "Colorado", "Coordinates": "40.950,-103.150", "Installed capacity (MW)": 430},
+        "Blue Canyon Wind Farm": {"State": "Oklahoma", "Coordinates": "34.850,-98.567", "Installed capacity (MW)": 423},
+        "Crystal Lake Wind Farm": {"State": "Iowa", "Coordinates": "43.233,-93.833", "Installed capacity (MW)": 416},
+        "Cimarron Bend Wind Farm": {"State": "Kansas", "Coordinates": "37.350,-99.983", "Installed capacity (MW)": 400},
+        "Grande Prairie Wind Farm": {"State": "Nebraska", "Coordinates": "42.600,-98.433", "Installed capacity (MW)": 400},
+        "High Prairie Renewable Energy Center": {"State": "Missouri", "Coordinates": "40.417,-92.517", "Installed capacity (MW)": 400},
+        "Klondike Wind Farm": {"State": "Oregon", "Coordinates": "45.583,-120.600", "Installed capacity (MW)": 400},
+        "Lone Star Wind Farm": {"State": "Texas", "Coordinates": "32.267,-99.450", "Installed capacity (MW)": 400},
+        "Windy Point/Windy Flats": {"State": "Washington", "Coordinates": "45.733,-120.733", "Installed capacity (MW)": 400},
+        "Panhandle Wind Farm (I & II)": {"State": "Texas", "Coordinates": "35.433,-101.250", "Installed capacity (MW)": 399},
+        "Twin Groves Wind Farms I & II": {"State": "Illinois", "Coordinates": "40.483,-88.700", "Installed capacity (MW)": 396},
+        "Papalote Creek Wind Farm": {"State": "Texas", "Coordinates": "27.983,-97.383", "Installed capacity (MW)": 380},
+        "Stephens Ranch Wind Farm": {"State": "Texas", "Coordinates": "32.933,-101.650", "Installed capacity (MW)": 376},
+        "Red Cloud Wind": {"State": "New Mexico", "Coordinates": "34.267,-105.417", "Installed capacity (MW)": 350},
+        "Lower Snake River Wind Project": {"State": "Washington", "Coordinates": "46.533,-117.600", "Installed capacity (MW)": 343},
+        "Beaver Creek Wind Farm I & II": {"State": "Iowa", "Coordinates": "42.033,-94.033", "Installed capacity (MW)": 340},
+        "Clines Corner Wind Farm": {"State": "New Mexico", "Coordinates": "34.350,-105.433", "Installed capacity (MW)": 325},
+        "Broadview Energy Wind": {"State": "New Mexico", "Coordinates": "34.567,-103.267", "Installed capacity (MW)": 324},
+        "White Hills": {"State": "Arizona", "Coordinates": "35.733,-114.667", "Installed capacity (MW)": 324},
+        "Maple Ridge Wind Farms I & II": {"State": "New York", "Coordinates": "43.750,-75.550", "Installed capacity (MW)": 322},
+        "Rattlesnake Creek Wind Farm": {"State": "Nebraska", "Coordinates": "42.333,-96.800", "Installed capacity (MW)": 318},
+        "Milford Wind Corridor Project": {"State": "Utah", "Coordinates": "38.550,-112.933", "Installed capacity (MW)": 306},
+        "Radford's Run Wind Farm": {"State": "Illinois", "Coordinates": "39.700,-89.017", "Installed capacity (MW)": 306},
+        "Blue Creek Wind Farm": {"State": "Ohio", "Coordinates": "41.000,-84.583", "Installed capacity (MW)": 302},
+        "Ida Grove Wind Farm": {"State": "Iowa", "Coordinates": "42.267,-95.467", "Installed capacity (MW)": 301},
+        "Balko Wind": {"State": "Oklahoma", "Coordinates": "36.517,-100.900", "Installed capacity (MW)": 300},
+        "Chisholm View Wind I & II": {"State": "Oklahoma", "Coordinates": "36.567,-97.767", "Installed capacity (MW)": 300},
+        "Green Pastures Wind Farm": {"State": "Texas", "Coordinates": "33.633,-99.417", "Installed capacity (MW)": 300},
+        "Jumbo Road Wind Farm": {"State": "Texas", "Coordinates": "34.817,-102.400", "Installed capacity (MW)": 300},
+        "Kay Wind Farm": {"State": "Oklahoma", "Coordinates": "36.983,-97.133", "Installed capacity (MW)": 300},
+        "Rock Creek Wind Project": {"State": "Missouri", "Coordinates": "40.433,-95.250", "Installed capacity (MW)": 300},
+        "Santa Rita Wind Energy": {"State": "Texas", "Coordinates": "31.183,-101.317", "Installed capacity (MW)": 300},
+        "Sherbino Wind Farm": {"State": "Texas", "Coordinates": "30.817,-102.367", "Installed capacity (MW)": 300},
+        "Shiloh Wind Farm": {"State": "California", "Coordinates": "38.117,-121.833", "Installed capacity (MW)": 300},
+        "Stateline Wind Project": {"State": "Oregon", "Coordinates": "46.033,-118.800", "Installed capacity (MW)": 300},
+        "Story County Wind Farm I & II": {"State": "Iowa", "Coordinates": "42.067,-93.317", "Installed capacity (MW)": 300},
+        "Streator Cayuga Ridge South Wind Farm": {"State": "Illinois", "Coordinates": "40.950,-88.483", "Installed capacity (MW)": 300},
+        "Tahoka Wind Farm": {"State": "Texas", "Coordinates": "33.150,-101.683", "Installed capacity (MW)": 300},
+        "Top Crop Wind Farm": {"State": "Illinois", "Coordinates": "41.167,-88.633", "Installed capacity (MW)": 300},
+        "Brady Wind Energy Center (I & II)": {"State": "North Dakota", "Coordinates": "46.000,-102.650", "Installed capacity (MW)": 299},
+        "Canadian Hills Wind Farm": {"State": "Oklahoma", "Coordinates": "35.683,-98.150", "Installed capacity (MW)": 299},
+        "Diamond Vista Wind Farm": {"State": "Kansas", "Coordinates": "38.817,-97.600", "Installed capacity (MW)": 299},
+        "Red Dirt Wind Project": {"State": "Oklahoma", "Coordinates": "35.900,-97.750", "Installed capacity (MW)": 299},
+        "Seiling": {"State": "Oklahoma", "Coordinates": "36.083,-98.750", "Installed capacity (MW)": 299},
+        "El Cabo Wind Farm": {"State": "New Mexico", "Coordinates": "34.600,-106.033", "Installed capacity (MW)": 298},
+        "Haystack Wind Farm": {"State": "Nebraska", "Coordinates": "41.550,-101.317", "Installed capacity (MW)": 298},
+        "Kingfisher Wind Farm": {"State": "Oklahoma", "Coordinates": "35.667,-97.867", "Installed capacity (MW)": 298},
+        "Thunder Ranch Wind Farm": {"State": "Oklahoma", "Coordinates": "36.533,-97.450", "Installed capacity (MW)": 298},
+        "Pioneer Prairie Wind Farm": {"State": "Iowa", "Coordinates": "43.467,-92.583", "Installed capacity (MW)": 293},
+        "Miami Wind Energy Center": {"State": "Texas", "Coordinates": "35.667,-100.567", "Installed capacity (MW)": 289},
+        "Pomeroy Wind Farm (1-4)": {"State": "Iowa", "Coordinates": "42.583,-94.717", "Installed capacity (MW)": 286},
+        "Gulf Wind Farm": {"State": "Texas", "Coordinates": "27.083,-97.583", "Installed capacity (MW)": 283},
+        "King Mountain Wind Farm": {"State": "Texas", "Coordinates": "31.233,-102.233", "Installed capacity (MW)": 281},
+        "Western Plains Wind Farm": {"State": "Kansas", "Coordinates": "37.850,-99.683", "Installed capacity (MW)": 280},
+        "Bethel Wind Farm": {"State": "Texas", "Coordinates": "34.567,-102.467", "Installed capacity (MW)": 276},
+        "Tecolote Wind": {"State": "New Mexico", "Coordinates": "34.367,-105.433", "Installed capacity (MW)": 272},
+        "Helena Energy Center": {"State": "Texas", "Coordinates": "30.800,-102.367", "Installed capacity (MW)": 268},
+        "Tucannon River Wind Farm": {"State": "Washington", "Coordinates": "46.467,-117.600", "Installed capacity (MW)": 267},
+        "Mount Storm Wind Farm": {"State": "West Virginia", "Coordinates": "39.233,-79.200", "Installed capacity (MW)": 264},
+        "Wake Wind Farm": {"State": "Texas", "Coordinates": "33.833,-101.100", "Installed capacity (MW)": 257},
+        "Amazon Wind Farm": {"State": "Texas", "Coordinates": "32.733,-100.733", "Installed capacity (MW)": 253},
+        "Keenan I & II": {"State": "Oklahoma", "Coordinates": "36.417,-99.417", "Installed capacity (MW)": 253},
+        "Cedar Point Wind Farm": {"State": "Colorado", "Coordinates": "39.417,-103.683", "Installed capacity (MW)": 252},
+        "Smoky Hills Wind Farm": {"State": "Kansas", "Coordinates": "38.967,-98.150", "Installed capacity (MW)": 251},
+        "Arbor Hill Wind Farm": {"State": "Iowa", "Coordinates": "41.350,-94.483", "Installed capacity (MW)": 250},
+        "Camp Springs Energy Center": {"State": "Texas", "Coordinates": "32.733,-100.800", "Installed capacity (MW)": 250},
+        "Ekola Flats": {"State": "Wyoming", "Coordinates": "41.933,-106.317", "Installed capacity (MW)": 250},
+        "Hidalgo Wind Farm": {"State": "Texas", "Coordinates": "26.467,-98.417", "Installed capacity (MW)": 250},
+        "Lundgren Wind Farm": {"State": "Iowa", "Coordinates": "42.283,-93.867", "Installed capacity (MW)": 250},
+        "O'Brien Wind Farm": {"State": "Iowa", "Coordinates": "43.200,-95.633", "Installed capacity (MW)": 250},
+        "Palo Duro Wind Facility": {"State": "Texas", "Coordinates": "36.483,-101.350", "Installed capacity (MW)": 250},
+        "Roosevelt Wind Farm": {"State": "New Mexico", "Coordinates": "33.933,-103.517", "Installed capacity (MW)": 250},
+        "Willow Springs Wind Farm": {"State": "Texas", "Coordinates": "33.350,-99.650", "Installed capacity (MW)": 250},
+        "Elm Creek (I & II)": {"State": "Minnesota", "Coordinates": "43.733,-94.767", "Installed capacity (MW)": 249},
+        "Golden West Wind Farm": {"State": "Colorado", "Coordinates": "38.933,-104.217", "Installed capacity (MW)": 249},
+        "Rush Springs Wind Energy Ctr.": {"State": "Oklahoma", "Coordinates": "34.683,-97.833", "Installed capacity (MW)": 249},
+        "Armadillo Flats Wind Farm": {"State": "Oklahoma", "Coordinates": "36.367,-97.817", "Installed capacity (MW)": 247},
+        "Big Sky Wind Farm": {"State": "Illinois", "Coordinates": "41.567,-89.433", "Installed capacity (MW)": 240},
+        "Pryor Mountain Wind Farm": {"State": "Montana", "Coordinates": "45.133,-108.683", "Installed capacity (MW)": 240},
+        "Glenrock wind farm (I, II, III)": {"State": "Wyoming", "Coordinates": "42.933,-105.867", "Installed capacity (MW)": 237},
+        "Prairie Breeze Wind Farm": {"State": "Nebraska", "Coordinates": "41.867,-98.000", "Installed capacity (MW)": 237},
+        "Chapman Ranch Wind Farm": {"State": "Texas", "Coordinates": "27.617,-97.533", "Installed capacity (MW)": 236},
+        "Clear Creek Energy Center": {"State": "Missouri", "Coordinates": "40.367,-94.900", "Installed capacity (MW)": 236},
+        "Electra Wind Farm": {"State": "Texas", "Coordinates": "34.150,-99.500", "Installed capacity (MW)": 230},
+        "Horse Creek Wind Farm": {"State": "Texas", "Coordinates": "33.167,-99.750", "Installed capacity (MW)": 230},
+        "Mariah North Wind Farm": {"State": "Texas", "Coordinates": "34.533,-102.917", "Installed capacity (MW)": 230},
+        "Plum Creek Wind": {"State": "Nebraska", "Coordinates": "40.150,-97.600", "Installed capacity (MW)": 230},
+        "Wild Horse Wind Farm": {"State": "Washington", "Coordinates": "47.017,-120.217", "Installed capacity (MW)": 229},
+        "Breunnings Breeze":{"State":"Texas", "Coordinates":"26.478226, -97.694981", "Installed capacity (MW)":228}
+    }
+    dictionary=json.dumps(wind_dic,indent=4)
+    with open("wind_list.json", "w") as outfile:
+        outfile.write(dictionary)
+
+with open("wind_list.json") as w:
+    data = json.load(w)
+
+def data_collect():
+    def make_wkt(lat_lon_string):
+        lat, lon = lat_lon_string.split(',')
+        wkt = f'POINT({lon.strip()} {lat.strip()})'
+        return wkt
+    
+    pramaters={
+        "api_key":"LR4nu6g5mUZgN5oJqPOKFRj31bQCoHYcxdNKG2UU",
+        "email":"phoenixducky@gmail.com",
+        "names":"tmy-2022"
+    }
+    count=0
+    for wind_farm_name, wind_farm_data in data.items():
+        state = wind_farm_data["State"]
+        coordinates = wind_farm_data["Coordinates"]
+        capacity = wind_farm_data["Installed capacity (MW)"]
+
+        r=requests.get(f"http://developer.nrel.gov/api/nsrdb/v2/solar/psm3-2-2-tmy-download.csv?wkt={make_wkt(coordinates)}",params=pramaters)
+        df=pd.read_csv(io.StringIO(r.content.decode('utf-8')))
+        df.at[0,"State"]=state
+        df.at[0,"City"]=wind_farm_name
+        df.at[0,"Country"]="USA"
+        dir_path=f"/Users/phoenixsheppard/Desktop/Wind_Labels/" 
+        file_path=f"{dir_path}/{count}.csv" 
+        df.to_csv(file_path,index=False)
+        count+=1
+        time.sleep(2)
+        print("D0ne")
+
+def compile():
+    frame_dic = {
+    "Month":pd.Series(),
+    "Day":pd.Series(),
+    "Hour":pd.Series(),
+    "Temperature": pd.Series(),
+    "Dew_Point": pd.Series(),
+    "GHI": pd.Series(),
+    "Pressure": pd.Series(),
+    "Wind_Speed": pd.Series()
+    }
+
+    key_list=list(frame_dic.keys())
+    print(key_list)
+    val_list=["Location ID","City","State","DHI Units","Latitude","Elevation","Dew Point Units","GHI Units"]
+    count=0
+    print(len(data))
+    while(count<len(data)):
+        dir_str=f'/Users/phoenixsheppard/Desktop/Wind_Labels/{count}.csv'
+        df=pd.read_csv(dir_str)
+        for i in range(len(val_list)):
+            frame_dic[key_list[i]]=pd.concat([frame_dic[key_list[i]],df[val_list[i]][2:]])
+        
+        count=count+1
+        print(count)
+                
+       
+
+    frame=pd.DataFrame(frame_dic)
+    frame.to_csv("wind_noloc.csv",index=False)
+
+def take_average():
+
+
+    def list_make():
+        state_arr=[]
+        name_arr=[]
+        for wind_farm_name, wind_farm_data in data.items():
+            state = wind_farm_data["State"]
+            coordinates = wind_farm_data["Coordinates"]
+            capacity = wind_farm_data["Installed capacity (MW)"]
+            state_arr.append(state)
+            name_arr.append(wind_farm_name)
+        return [state_arr,name_arr]
+
+
+
+    states=list_make()[0]
+    name=list_make()[1] 
+
+    AVG_dic = {
+        "Temperature": None,
+        "Dew_Point": None,
+        "GHI": None,
+        "Pressure":None,
+        "Wind_Speed": None
+    }
+
+    key_list=list(AVG_dic.keys())
+    print(key_list)
+
+    df = pd.read_csv('wind_noloc.csv')
+    def calculate_grouped_mean(data_frame, column_name, group_size):
+        # Calculate the group indices based on rows
+        group_indices = np.arange(len(data_frame)) // group_size
+        
+        # Group the DataFrame by the calculated indices and calculate the mean for the specified column
+        grouped_mean_series = data_frame[column_name].groupby(group_indices).mean()
+        
+
+        return grouped_mean_series  #return a dataframe with the mean values for the specified column
+
+    for i in range (len(key_list)):
+        AVG_dic[key_list[i]]= calculate_grouped_mean(df,[key_list[i]],8760)[key_list[i]] #must do key_list[i] because it is the column name and calculate grouped mean returns a dataframe
+
+    print(
+        AVG_dic["Temperature"]
+    )
+    avg_frame = pd.DataFrame(AVG_dic)
+    avg_frame.insert(0, 'Name', name)
+    avg_frame.insert(0, 'State', states)
+    avg_frame.to_csv("WIND_AVG new.csv",index=False)
+
+
+data_collect()
+compile()
+take_average()
+
+
+
+
+
+
+#you have done it for suitable wind locations, and I think now you need to do it for non suitable wind locations 
+# look into the documentation of supervised leaening to find out
+    
+
+
